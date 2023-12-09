@@ -9,6 +9,7 @@ namespace MoreTimeTags {
         public static void Prefix(scrController __instance) {
             if(__instance.paused || !scrConductor.instance.isGameWorld) return;
             AudioSource song = scrConductor.instance.song;
+            if(!(bool) song.clip) return;
             TimeSpan curTimeSpanWithPitch = TimeSpan.FromSeconds((double)song.time / song.pitch);
             CustomTags.CurMinuteWithPitch = curTimeSpanWithPitch.Minutes;
             CustomTags.CurSecondWithPitch = curTimeSpanWithPitch.Seconds;
