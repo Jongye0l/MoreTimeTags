@@ -64,5 +64,5 @@
 ### 테스트 환경 Test environment
 * Windows 11
 * A Dance of Fire and Ice 2.5.0(r110)
-* A Dance of Fire and Ice 2.6.2(r119)
+* A Dance of Fire and Ice 2.6.3(r120)
 * Overlayer 3.0.3
