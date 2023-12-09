@@ -14,7 +14,7 @@ using Overlayer.Modules;
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: OverlayerModule("MoreTimeTags", "1.0.0", typeof(Main))]
+[assembly: OverlayerModule("MoreTimeTags", "1.0.1", typeof(Main))]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
