@@ -4,7 +4,7 @@ using Overlayer.Core.Patches;
 using UnityEngine;
 
 namespace MoreTimeTags {
-    [LazyPatch("MoreTimeTags.UpdateMusicTime", "scrController", "PlayerControl_Update", Triggers = new[] { "PitchedCurMinute", "PitchedCurSecond", "PitchedCurMilliSecond", "PitchedTotalMinute", "PitchedTotalSecond", "PitchedTotalMilliSecond", "LeftMinute", "LeftSecond", "LeftMilliSecond", "PitchedLeftMinute", "PitchedLeftSecond", "PitchedLeftMilliSecond", "FinishYear", "FinishMonth", "FinishDay", "FinishHour", "FinishMinute", "FinishSecond", "FinishMilliSecond", "MusicProgress" })]
+    [LazyPatch("MoreTimeTags.UpdateMusicTime", "scrController", "PlayerControl_Update", Triggers = new[] { "CurMinuteWithPitch", "CurSecondWithPitch", "CurMilliSecondWithPitch", "TotalMinuteWithPitch", "TotalSecondWithPitch", "TotalMilliSecondWithPitch", "LeftMinute", "LeftSecond", "LeftMilliSecond", "LeftMinuteWithPitch", "LeftSecondWithPitch", "LeftMilliSecondWithPitch", "FinishYear", "FinishMonth", "FinishDay", "FinishHour", "FinishMinute", "FinishSecond", "FinishMilliSecond", "MusicProgress" })]
     public class MusicTimePatch {
         public static void Prefix(scrController __instance) {
             if(__instance.paused || !scrConductor.instance.isGameWorld) return;

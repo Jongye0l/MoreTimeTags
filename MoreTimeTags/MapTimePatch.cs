@@ -4,7 +4,7 @@ using Overlayer;
 using Overlayer.Core.Patches;
 
 namespace MoreTimeTags {
-    [LazyPatch("MoreTimeTags.UpdateMapTime", "scnEditor", "Update", Triggers = new[] { "CurMapMinute", "CurMapSecond", "CurMapMilliSecond", "TotalMapMinute", "TotalMapSecond", "TotalMapMilliSecond", "PitchedCurMapMinute", "PitchedCurMapSecond", "PitchedCurMapMilliSecond", "PitchedTotalMapMinute", "PitchedTotalMapSecond", "PitchedTotalMapMilliSecond", "LeftMapMinute", "LeftMapSecond", "LeftMapMilliSecond", "PitchedLeftMapMinute", "PitchedLeftMapSecond", "PitchedLeftMapMilliSecond", "FinishMapYear", "FinishMapMonth", "FinishMapDay", "FinishMapHour", "FinishMapMinute", "FinishMapSecond", "FinishMapMilliSecond", "TimeProgress" })]
+    [LazyPatch("MoreTimeTags.UpdateMapTime", "scnEditor", "Update", Triggers = new[] { "CurMapMinute", "CurMapSecond", "CurMapMilliSecond", "TotalMapMinute", "TotalMapSecond", "TotalMapMilliSecond", "CurMapMinuteWithPitch", "CurMapSecondWithPitch", "CurMapMilliSecondWithPitch", "TotalMapMinuteWithPitch", "TotalMapSecondWithPitch", "TotalMapMilliSecondWithPitch", "LeftMapMinute", "LeftMapSecond", "LeftMapMilliSecond", "LeftMapMinuteWithPitch", "LeftMapSecondWithPitch", "LeftMapMilliSecondWithPitch", "FinishMapYear", "FinishMapMonth", "FinishMapDay", "FinishMapHour", "FinishMapMinute", "FinishMapSecond", "FinishMapMilliSecond", "TimeProgress" })]
     public class MapTimePatch {
         public static void Postfix() {
             if (!scrConductor.instance.isGameWorld || scnEditor.instance.inStrictlyEditingMode || ADOBase.controller.state == States.Fail) return;
